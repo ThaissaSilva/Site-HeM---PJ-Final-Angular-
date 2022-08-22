@@ -1,0 +1,36 @@
+/****** FILTRO ********/
+
+.filtro-container{
+    border: 3px solid black;
+    height: auto;
+    width: 245px;
+    margin-right: 40px;
+}
+
+.filtro-container td{
+    height: 50px;
+    width: 240px;
+    color: white;
+    background-color: rgb(238, 70, 70);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:larger;
+}
+
+.filtro-container form{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.filtro-container input[type="radio"]{
+    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+.filtro-container label{
+    margin-left: 10px;
+}

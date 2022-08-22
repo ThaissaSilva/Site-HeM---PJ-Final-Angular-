@@ -1,0 +1,24 @@
+<div class="titulo">
+    <p>Wishlist</p>
+</div>
+<div class="wishlist-container">
+    <div>
+        <div  *ngIf="produtos.length != 0" class="card-container">
+            <div *ngFor="let item of produtos; let i =index" class="cards-individuais">               
+                <img src="/assets/Imagens/{{item.foto_principal}}">               
+                <div>
+                    <h3>{{item.marca}}</h3>
+                    <h6>{{item.nome}}</h6>
+                    <p>{{item.preco}}€</p>
+                </div>                
+                <button class="button-container" (click)="remover(item)">Remover</button>               
+            </div>
+        </div>
+        <div *ngIf="produtos.length == 0" class="card-container">
+            <div class="cards-individuais">
+                <h3>Não há produtos na sua Wishlist!!</h3>
+                <button class="button-container" routerLink="">Adicionar produtos!</button> 
+            </div>
+        </div>
+    </div>
+</div>

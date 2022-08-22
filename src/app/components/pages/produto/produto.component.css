@@ -1,0 +1,48 @@
+
+.produto.container{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+
+.produto-individuais h3{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.produto-individuais h6{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 30px;
+}
+
+.produto-individuais h5{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.produto-individuais-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produto-individuais-img img{
+    padding: 10px;
+}
+
+.produto-individuais p{
+    font-size:x-large;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+}

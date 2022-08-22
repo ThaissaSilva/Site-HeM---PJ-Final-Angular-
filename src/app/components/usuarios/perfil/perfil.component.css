@@ -1,0 +1,47 @@
+.registro-container{
+    padding: 10px;
+    height: 800px;
+    width: 600px;
+}
+
+.form-group{
+    text-align:left;
+    margin-bottom: 20px;
+}
+
+.form-group h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-element{
+    text-align:left;
+    margin: 15px;
+}
+
+.form-element label{
+    font-size: 16px; 
+}
+
+.form-element input[type="text"], .form-element input[type="password"], .form-element input[type="number"]{
+    margin-top: 10px;
+    width: 100%;
+    padding: 6px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.form-element button[type="submit"]{
+    border: 1px solid rgb(174, 68, 68);
+    border-radius: 5px;
+    height: 35px;
+    padding: 0 20px 0 20px;
+    bottom: 0px;
+    right: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: rgb(174, 68, 68);
+    color: white;
+    letter-spacing: 1px;
+}

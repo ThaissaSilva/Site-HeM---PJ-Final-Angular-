@@ -1,0 +1,16 @@
+<div class="filtro-container">
+    <tr>
+        <td>Tipo</td>
+    </tr>
+    <form *ngFor="let tipo of listatiposProduto">
+        <input type="radio" value="tiposProduto.tiposProduto" name="tiposProduto" >
+        {{ tipo }}
+    </form>
+    <tr>
+        <td>Cor</td>
+    </tr>
+    <form *ngFor="let cor of listaCorProduto">
+        <input type="radio" value="cor.cor"  name="cor">
+        {{ cor }}
+    </form>
+</div>

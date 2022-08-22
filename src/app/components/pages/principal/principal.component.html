@@ -1,0 +1,31 @@
+<carousel class="carousel-container">
+  <slide>
+    <img src="/assets/Imagens/slider1.jpg">
+  </slide>
+  <slide>
+    <img src="/assets/Imagens/slider2.jpg">
+  </slide>
+  <slide>
+    <img src="/assets/Imagens/slider3.jpg">
+  </slide>
+  <div class="carousel-texto">
+    <p>SALDOS</p>
+  </div>
+</carousel>
+
+<div>
+  <div class="destaques-texto">
+    <p>DESTAQUES</p>
+  </div>
+  <button type="button" routerLink="/produto,produto.id" routerLinkActive="activa" class="destaque-container">
+    <div *ngFor="let artigo of listaArtigosDestaque" class="destaques-container-img">
+      <a [routerLink]="['/produto', artigo.id]">
+        <img src="/assets/Imagens/{{ artigo.foto_principal }}" />
+      </a>
+    </div>
+  </button>
+</div>
+
+
+
+

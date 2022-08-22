@@ -1,0 +1,18 @@
+#red{
+    color: red;
+}
+
+.nav-options {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: none;
+}
+
+.nav-options i{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    margin-left: 252px;
+}

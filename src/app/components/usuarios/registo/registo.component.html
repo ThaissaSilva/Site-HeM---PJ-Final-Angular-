@@ -1,0 +1,35 @@
+<div class="registro-container">
+    <div class="form-group">
+        <h2>Registre-se aqui</h2>
+        <h5>Torne-se membro - não perca as promoções e cupões bónus.</h5>
+    </div>   
+    <form [formGroup]="formUsuario" class="form-element" (ngSubmit)="registrar()">
+        <div>
+            <p>
+                <label for="nome">Nome:</label>
+                <input formControlName="nome" type="text" id="nome" placeholder="Introduza o seu nome">
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input formControlName="email" type="text" id="email" placeholder="Introduza o seu email">
+            </p>
+            <p>
+                <label for="password">Senha:</label>
+                <input formControlName="password" type="password" id="password" placeholder="Introduza a sua senha">
+            </p>
+            <p>
+                <label for="morada">Morada:</label>
+                <input formControlName="morada" type="text" id="morada" placeholder="Introduza a sua morada">
+            </p>
+            <p>
+                <label for="codigoPostal">Código Postal:</label>
+                <input formControlName="codigoPostal" type="text" id="codigoPostal" placeholder="Introduza o seu código postal">
+            </p>
+            <p>
+                <label for="pais">País:</label>
+                <input formControlName="pais" type="text" id="pais" placeholder="Introduza o seu país">
+            </p>
+            <button id="submit" type="submit">Registrar</button>          
+        </div>
+    </form>
+</div>

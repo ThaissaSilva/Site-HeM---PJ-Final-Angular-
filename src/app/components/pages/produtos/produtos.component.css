@@ -1,0 +1,121 @@
+
+.produtos-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+/****** ALL PRODUTOS ********/
+
+.all-produtos-container{
+    margin-right: 40px;
+    height: auto;
+    width: auto;
+}
+
+.nav-options {
+    display: flex;
+    background-color: white;
+    border: none;
+    align-self: end;
+}
+
+.all-produtos-titulo{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.all-produtos-resultados{
+    font-size: large;
+}
+
+/****** CARDS ********/
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    gap: 50px;
+    margin-left: 10px;
+}
+
+.card{
+    border: none;
+    height: 480px;
+    width: 300px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.card img{
+    max-width:234px;
+    margin-left: 23px;
+    transition: opacity 1s;
+    margin-top: -4px;
+}
+
+.card img:hover{
+    opacity: 0;
+}
+
+.img-prin{
+    z-index: 1;
+}
+
+.card img + .img-sec{
+    position: absolute;
+    margin-top: -2px;
+    z-index: 0;
+}
+
+.img-sec:hover  .card img:hover{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.card h3{
+    margin-top: 15px;
+    font-size:25px;
+    font-weight: bolder;
+}
+
+.card h6{
+    font-size:15px;
+}
+
+.card p{
+    font-size:22px;
+    font-weight: bolder;
+}
+
+
+/* ***** BUTTON ******** */
+.button-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.all-produtos-button{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-produtos-button button{
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 520px;
+    cursor: pointer;
+    font-size:20px;
+    margin-top: 30px;
+    margin-left: 10px;
+} 

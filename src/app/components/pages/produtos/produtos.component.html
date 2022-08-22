@@ -1,0 +1,30 @@
+<div class="produtos-container">
+    <app-filtro-page-produtos></app-filtro-page-produtos>
+    
+    <div class="all-produtos-container">
+        <div class="all-produtos-titulo">
+            <p>Homem</p>
+        </div>
+        <div class="all-produtos-resultados">
+            <p>Total de resultados: {{ artigoLista.length }}</p>
+        </div>
+        <div class="card-container">
+            <div *ngFor="let item of artigoLista" class="card">
+                <app-wishlist-star [item]='item'></app-wishlist-star>
+                <img src="/assets/Imagens/{{item.foto_principal}}" class="img-prin">
+                <img src="/assets/Imagens/{{item.foto_secundaria}}" class="img-sec">
+                <h3>{{item.marca}}</h3>
+                <h6>{{item.nome}}</h6>
+                <p>{{item.preco}}€</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="all-produtos-button">
+                <button (click)="next6()">Ver mais</button>
+            </div>
+            <div class="all-produtos-button">
+                <button (click)="voltar6()">Voltar</button>
+            </div>
+        </div>
+    </div>
+</div>

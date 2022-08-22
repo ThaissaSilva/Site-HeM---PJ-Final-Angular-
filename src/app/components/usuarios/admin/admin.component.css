@@ -1,0 +1,154 @@
+.registro-container{
+    padding: 10px;
+    height: 665px;
+    width: auto;
+}
+
+.form-group{
+    text-align:left;
+    margin-bottom: 20px;
+}
+
+.form-group h2{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-element{
+    margin-bottom: 60px;
+    text-align:left;
+    align-items: center;
+    width: 100%;
+}
+
+.form-element label{
+    font-size: 16px; 
+}
+
+.form-element input{
+    margin-top: 10px;
+    width: 60%;
+    padding: 6px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-right: 7px;
+}
+
+.form-element p select{
+    height: 20px;
+    width: 60%;
+}
+
+.form-element label{
+    margin-right: 10px;
+    text-align: right;
+    width: 100px;
+    line-height: 26px;
+}
+
+.form-element button{
+    border: 1px solid rgb(174, 68, 68);
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 10px;
+    background-color: rgb(174, 68, 68);
+    color: white;
+    letter-spacing: 1px;
+    font-size: 14px; 
+}
+
+#submit{
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#pesquisa{
+    margin-bottom: 60px;
+    text-align:left;
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+/* TABELA DADOS */
+
+#tabelaDados, #tabelaDados th, #tabelaDados td {
+    border: 1px solid rgb(1, 1, 1);
+    margin-left: 10px;
+}
+
+#tabelaDados th, #tabelaDados td {
+    padding: 20px;
+    text-align: center;
+}
+
+#tabelaDados thead tr {
+    background-color: rgb(174, 68, 68);
+    color: white;
+}
+
+#tabelaDados tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+#tabelaDados tbody tr {
+    cursor: pointer;
+}
+
+#tabelaDados tbody tr:hover {
+    background-color: rgb(163, 163, 163);
+    color: white;
+}
+
+
+#tabelaDados img{
+    max-width:100px;
+    transition: opacity 1s;
+}
+
+#tabelaDados img:hover{
+    opacity: 0;
+}
+
+#img-prin{
+    z-index: 1;
+}
+
+#img-sec{
+    margin-top: -159px;
+}
+
+#tabelaDados + #img-sec{
+    position: absolute;
+    z-index: 0;
+}
+
+#img-sec:hover + #tabelaDados:hover{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+.tabela_livro_icone {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.all-produtos-titulo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 24px; 
+}
+
+.numProdutos{
+    margin-left: 10px;
+}
+

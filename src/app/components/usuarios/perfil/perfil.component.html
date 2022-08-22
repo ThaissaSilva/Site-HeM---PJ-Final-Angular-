@@ -1,0 +1,35 @@
+
+<div class="registro-container">
+    <div class="form-group">
+        <h2>Perfil Usuário</h2>
+    </div>  
+    <form [formGroup]="formUsuario" class="form-element" (ngSubmit)="onSubmit(formUsuario)">
+        <div>
+            <p>
+                <label for="nome">Nome:</label>
+                <input formControlName="nome" type="text" id="nome" value="{{ usuariolist.nome }}">               
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input formControlName="email" type="text" id="email" value="{{ usuariolist.email }}">
+            </p>
+            <p>
+                <label for="password">Senha:</label>
+                <input formControlName="password" type="password" id="password" value="{{ usuariolist.password }}">
+            </p>
+            <p>
+                <label for="morada">Morada:</label>
+                <input formControlName="morada" type="text" id="morada" value="{{ usuariolist.morada }}">
+            </p>
+            <p>
+                <label for="codigoPostal">Código Postal:</label>
+                <input formControlName="codigoPostal" type="text" id="codigoPostal" value="{{ usuariolist.codigoPostal }}">
+            </p>
+            <p>
+                <label for="pais">País:</label>
+                <input formControlName="pais" type="text" id="pais" value="{{ usuariolist.pais }}">
+            </p>
+            <button id="submit" type="submit">Editar</button>          
+        </div>
+    </form>
+</div>

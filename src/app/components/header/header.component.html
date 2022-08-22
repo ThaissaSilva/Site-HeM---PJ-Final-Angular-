@@ -1,0 +1,123 @@
+<nav>
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li>
+                <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button">Homem</button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Casacos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Camisas</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Calças</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Sweatshirts</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Polos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Sapatos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" routerLink="/produtos">Todos</a></li>
+                </ul>
+            </div>
+            </li>
+            <li> | </li>
+            <li>
+                <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button">Mulher</button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Vestidos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Blusões</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Coletes</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Jeans</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Saias</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Calções</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Lingerie</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Sapatos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Malas</a></li>
+                  <li role="menuitem"><a class="dropdown-item" routerLink="/produtos">Todos</a></li>
+                </ul>
+                </div>
+            </li>
+         </ul>
+         <a class="nav-img" routerLink="/">
+            <img src="/assets/Imagens/logo.png" alt="logo"/>
+        </a>
+        <ul class="nav-links">
+            <li>
+                <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button">Criança</button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Menina | 6-14 Anos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Menino | 6-14 Anos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Bebé Menina | 3 Meses - 5 Anos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Bebé Menino | 3 Meses - 5 Anos</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Mini | 0-12 Meses</a></li>
+                  <li role="menuitem"><a class="dropdown-item" routerLink="/produtos">Todos</a></li>
+                </ul>
+            </div>
+            </li>
+            <li> | </li>
+            <li>
+                <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button">Acessórios</button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Malas</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Pulseiras</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Anéis</a></li>
+                  <li role="menuitem"><a class="dropdown-item" routerLink="/produtos">Todos</a></li>
+                </ul>
+                </div>
+            </li>
+         </ul>
+
+        <div class="nav-icons">
+            <div *ngIf="usuario?.email">
+                <p>Bem-vindo(a), {{ usuario?.nome }}</p>
+            </div>
+            <button *ngIf="!usuario?.email" class="nav-options registro" routerLink="/registo">
+                <i class="fa-solid fa-user-plus"></i>
+                <span class="nav-options-text">Registro</span>
+            </button>
+            <button *ngIf="!usuario?.email" class="nav-options registro" (click)="fazerLogin()">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span class="nav-options-text">Login</span>
+            </button> 
+            <button *ngIf="usuario?.email" class="nav-options registro" routerLink="/wishlist">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <span class="nav-options-text">Wishlist</span>
+            </button>  
+            <button *ngIf="usuario?.email" class="nav-options registro" routerLink="/perfil">
+                <i class="fa-solid fa-user"></i>
+                <span class="nav-options-text">Perfil</span>
+            </button>
+            <button *ngIf="usuario?.email" class="nav-options registro" id="logout" (click)="logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="nav-options-text">Logout</span>
+            </button>             
+            <button class="nav-options registro" routerLink="/admin">Adm</button>
+        </div>
+    </div>
+</nav>
+
+<div>
+    <div [ngClass]="{'active': login === true}" class="wrapper">
+        <div [ngClass]="{'active': login === true}" class="popup">
+            <button class="close-btn" (click)="close()">X</button>
+            <div class="form">            
+                <h2>Controlo de Acesso</h2>
+                <form [formGroup]="formLogin" (ngSubmit)="logar()" class="form">
+                    <p *ngIf="email.errors?.['required'] || password.errors?.['required']">Os dois campos são de preenchimento obrigatório! </p>
+                    <div class="form-element">
+                        <p *ngIf="email.errors?.['pattern']">O email tem um formato incorreto!</p>
+                        <p  *ngIf="usuarioInexistente">Utilizador inexistente!</p>
+                        <label for="email">E-mail:</label>
+                        <input formControlName="email" type="text" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-element">
+                        <label for="password">Senha:</label>
+                        <input formControlName="password" type="password" id="password" placeholder="Enter senha">
+                    </div>
+                    <div class="form-element">
+                        <button type="submit" class="btn btn-primary">Validar</button>
+                    </div>
+                </form>
+            </div>        
+        </div>
+    </div>
+</div>
+  

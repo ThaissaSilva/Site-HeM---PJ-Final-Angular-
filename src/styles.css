@@ -1,0 +1,13 @@
+:root{
+    --cor0: #e4e4e4;
+    --cor1: #181818;
+    --fonte-padrao: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    max-width:1400px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
